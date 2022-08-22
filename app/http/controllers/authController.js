@@ -29,7 +29,7 @@ function authController() {
               return next(err) 
             }
             req.flash("success", "Logged in successfully");
-            return res.redirect('/')
+            return res.redirect(_getRedirectUrl(req))
           }) 
         })(req, res, next) 
       }
